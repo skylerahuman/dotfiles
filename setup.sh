@@ -2,7 +2,7 @@
 set -e
 
 mkdir -p "$HOME/.config"
-for d in kitty hypr yazi ytmusic-tui ytfzf greetd nvim; do
+for d in alacritty hypr yazi ytmusic-tui ytfzf greetd nvim; do
   mkdir -p "$HOME/.config/$d"
   [ -d "config/$d" ] && for f in config/$d/*; do
     ln -sf "$PWD/$f" "$HOME/.config/$d/"
