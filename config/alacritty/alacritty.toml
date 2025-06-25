@@ -1,0 +1,41 @@
+# Orange Cracker Alacritty configuration
+[font]
+normal = { family = "JetBrains Mono", style = "Regular" }
+size = 11.0
+
+[cursor]
+style = "Beam"
+vi_mode_style = "Beam"
+color = "0xf4b400"
+
+[colors.primary]
+background = "0x1e1e1e"
+foreground = "0xffffff"
+
+[colors.cursor]
+text = "0x1e1e1e"
+cursor = "0xf4b400"
+
+[colors.normal]
+black = "0x1e1e1e"
+red = "0xff6f00"
+green = "0xf4b400"
+yellow = "0xff9100"
+blue = "0xff1744"
+magenta = "0xff9100"
+cyan = "0xf4b400"
+white = "0xffffff"
+
+[colors.bright]
+black = "0xaaaaaa"
+red = "0xff6f00"
+green = "0xf4b400"
+yellow = "0xff9100"
+blue = "0xff1744"
+magenta = "0xff9100"
+cyan = "0xf4b400"
+white = "0xeeeeee"
+
+[selection]
+text = "0x1e1e1e"
+background = "0xff9100"
