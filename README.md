@@ -5,5 +5,5 @@ These dotfiles provide an orange themed Linux environment inspired by a Cheez-It
 ## Usage
 
 Run `setup.sh` to symlink configuration files into `~/.config` and install
-basic dependencies. The Hyprland setup expects Kitty as the terminal and uses
+basic dependencies. The Hyprland setup expects Alacritty as the terminal and uses
 `tuigreet` for login.

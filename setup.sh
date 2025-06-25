@@ -12,4 +12,4 @@ done
 ln -sf "$PWD/.zshrc" "$HOME/.zshrc"
 ln -sf "$PWD/.p10k.zsh" "$HOME/.p10k.zsh"
 
-printf '\nDotfiles linked. Install packages: zsh kitty hyprland tuigreet.\n'
+printf '\nDotfiles linked. Install packages: zsh alacritty hyprland tuigreet.\n'
