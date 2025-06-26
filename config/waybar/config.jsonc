@@ -1,0 +1,15 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "margin-left": 20,
+  "margin-right": 20,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["custom/apps", "tray", "pulseaudio", "battery"],
+  "custom/apps": {
+    "exec": "bash -c 'hyprctl clients -j | jq length'",
+    "interval": 5,
+    "format": " {}"
+  }
+}
