@@ -29,3 +29,17 @@ alias ytmusic='ytmusic-tui'
 alias yazi='yazi'
 alias navi='navi'
 alias cg='cargo'
+alias ai='tmux attach -t ai 2>/dev/null || tmux new -s ai'
+
+# Automatically invoke tmux on shell startup if not already inside
+if [[ -z $TMUX ]]; then
+  ai
+fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(starship init zsh)"
+
+export VISUAL=nvim
+export EDITOR="$VISUAL"

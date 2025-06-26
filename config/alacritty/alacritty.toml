@@ -1,12 +1,37 @@
-# Orange Cracker Alacritty configuration
+[window]
+dynamic_title = true
+padding = { x = 8, y = 8 }
+opacity = 0.90
+
+[terminal.shell]
+program = "/usr/bin/zsh"
+args = ["-l", "-i"]    # login & interactive so it reads ~/.zshrc
+
+
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+save_to_clipboard = true
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+color = "0xff1744"
+
 [font]
 normal = { family = "JetBrains Mono", style = "Regular" }
+italic = { family = "JetBrains Mono", style = "Italic" }
+bold   = { family = "JetBrains Mono", style = "Bold" }
 size = 11.0
+offset = { x = 0, y = -1 }
 
 [cursor]
 style = "Beam"
 vi_mode_style = "Beam"
-color = "0xf4b400"
 
 [colors.primary]
 background = "0x1e1e1e"
@@ -36,6 +61,3 @@ magenta = "0xff9100"
 cyan = "0xf4b400"
 white = "0xeeeeee"
 
-[selection]
-text = "0x1e1e1e"
-background = "0xff9100"
