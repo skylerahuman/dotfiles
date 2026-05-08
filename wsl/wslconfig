@@ -1,0 +1,4 @@
+[wsl2]
+memory=17179869184
+swap=8589934592
+defaultVhdSize=137438953472
