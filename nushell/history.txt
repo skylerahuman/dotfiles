@@ -1,0 +1,37 @@
+ls C:\ProgramData\chocolatey\lib\nushell\**\nu.exe | get name
+cd C:/
+ls
+where nu.exe
+choco
+which nu
+ls C:\**\nu.exe
+choco install gsudo -y
+gsudo
+gsudo ls C:\**\nu.exe
+$PATH
+$env.PATH
+rust
+rustc
+which rustc
+Remove-Item -Recurse -Force "$HOME\.cargo"
+rustup default stable
+rustup
+rustup default stable
+which rustup
+which rustc
+which cargo
+wsl
+wsl --terminate archlinux
+cd C:\Users\skyle\AppData\config
+ls
+git
+choco install git.install -y --params "'/NoShellIntegration /NoGuiHereIntegration /NoGitLfs'"
+gsudo choco install git.install -y --params "'/NoShellIntegration /NoGuiHereIntegration /NoGitLfs'"
+gsudo cmd /c mklink "C:\bin\git.exe" "C:\Program Files\Git\bin\git.exe"
+gsudo cmd /c mklink 'C:\bin\git.exe' 'C:\Program Files\Git\bin\git.exe'
+ls C:\bin | where name == 'C:\bin\git.exe'
+cd ..
+cd Config\
+ls
+git init
+git checkout -b windows
