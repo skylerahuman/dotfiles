@@ -35,3 +35,291 @@ cd Config\
 ls
 git init
 git checkout -b windows
+git add nushell\
+git commit -m "Base Windows Nushell Configuration"
+git config --global user.email "skylershuman@pm.me"
+git config --global user.name "skylerahuman"
+git commit -m "Base Windows Nushell Configuration"
+ssh-keygen -t ed25519 -C "skylershuman@pm.me"
+ls C:\Users\skyle
+mkdir C:\Users\skyle\AppData\Config\ssh
+gsudo cmd /c mklink /D $'($env.USERPROFILE)\.ssh' 'C:\Users\skyle\AppData\Config\ssh'
+ssh-keygen -t ed25519 -C "skylershuman@pm.me"
+gsudo ssh-agent -s | complete
+gsudo ssh-add $'($env.USERPROFILE)\.ssh\id_ed25519'
+gsudo sc config ssh-agent start= demand
+gsudo sc start ssh-agent
+ssh-add $'($env.USERPROFILE)\.ssh\id_ed25519'
+$keyPath = $'($env.USERPROFILE)\.ssh\id_ed25519'
+let keyPath = $'($env.USERPROFILE)\.ssh\id_ed25519'
+gsudo icacls $keyPath /inheritance:r
+gsudo icacls $keyPath /grant:r $"($env.USERNAME):F"
+gsudo sc start ssh-agent
+ssh-add $keyPath
+ssh -T git@github.com
+cat
+open ssh\id_ed25519
+open ssh\id_ed25519.pub
+ssh -T git@github.com
+git remote add origin git@github.com:skylerahuman/dotfiles.git
+git push -u origin windows --force
+touch
+touch .gitignore
+nvim
+ls
+clear
+mv ~/ .gitconfig C:\Users\skyle\AppData\Config/git/gitconfig
+cd ..
+ls
+mv ~/ .gitconfig C:\Users\skyle\AppData\Config/git/gitconfig
+mv ~/ .wslconfig C:\Users\skyle\AppData\Config/wsl/wslconfig
+mkdir C:\Users\skyle\AppData\Config\git
+mkdir C:\Users\skyle\AppData\Config\wsl
+mv ~/ .gitconfig C:\Users\skyle\AppData\Config/git/gitconfig
+mv ~/.gitconfig C:\Users\skyle\AppData\Config\git\gitconfig
+mv ~/.wslconfig C:\Users\skyle\AppData\Config\wsl\wslconfig
+gsudo cmd /c mklink 'C:\Users\skyle\.gitconfig' 'C:\Users\skyle\AppData\Config\git\gitconfig'
+gsudo cmd /c mklink 'C:\Users\skyle\.wslconfig' 'C:\Users\skyle\AppData\Config\wsl\wslconfig'
+cd C:\Users\skyle\AppData\Config
+git add git/ wsl/
+git commit -m "Relocated gitconfig and wslconfig to Config sink"
+git push origin windows
+git fetch --prune
+git branch -a
+cd ~
+choco install yazi -y
+gsudo choco install yazi -y
+gsudo cmd /c mklink 'C:\bin\yazi.exe' 'C:\ProgramData\chocolatey\bin\yazi.exe'
+yazi
+clear
+ls
+cd AppData
+cd Config\
+ls
+cd ..
+ls
+mkdir C:\Users\skyle\AppData\Config\yazi
+mv C:\Users\skyle\AppData\Roaming\yazi C:\Users\skyle\AppData\Config\yazi
+gsudo cmd /c mklink 'C:\Users\skyle\AppData\Roaming\yazi' 'C:\Users\skyle\AppData\Config\yazi'
+cd $config
+cd $env.config
+clear
+cd AppData\Config\
+ls
+git add yazi
+git push origin windows
+git commit -m "Add yazi file explorer"
+git push origin windows
+clear
+yazi
+clear
+cd ..
+yazi
+clear
+ls
+let junctions = [<\n>    "Application Data", <\n>    "Local Settings", <\n>    "NetHood", <\n>    "PrintHood", <\n>    "Recent", <\n>    "SendTo", <\n>    "Start Menu", <\n>    "Templates"<\n>]
+$junctions | each { |item| gsudo attrib +h +s $item }
+clear
+gsudo cmd /c "attrib +h +s 'Application Data' & attrib +h +s 'Local Settings' & attrib +h +s 'NetHood' & attrib +h +s 'PrintHood' & attrib +h +s 'Recent' & attrib +h +s 'SendTo' & attrib +h +s 'Start Menu' & attrib +h +s 'Templates'"
+ls
+gsudo attrib +h +s "Application Data"
+gsudo attrib +h +s "NetHood"
+gsudo attrib +h +s "PrintHood"
+rm NetHood
+rm PrintHood
+gsudo attrib +h +s "Recent"
+gsudo attrib +h +s "SendTo"
+gsudo attrib +h +s "Start Menu"
+ls
+gsudo attrib +h +s "Templates"
+rm Templates
+ls
+alias lsh = ls | where type != symlink
+ls
+lsh
+alias lsh = (ls | where type != symlink)
+alias lsh = ls | where type != symlink
+lsh
+yazi
+clear
+choco install zellij -y
+gsudo choco install zellij -y
+gsudo choco upgrade zellij -y
+config nu
+clear
+gsudo winget install AutoHotKey.AutoHotKey
+ls
+ls AppData\
+ls AppData\Local
+clear
+cd AppData\Config\
+ls
+touch wallpaper_cycler.ahk
+filepilot
+which filepilot
+let ahk_path = "C:\Program Files\AutoHotkey\v2\AutoHotkey.exe"
+cd C:\
+find
+ls C:\**\AutoHotKey.exe
+gsudo ls C:\**\AutoHotKey.exe
+let ahk_path = 'C:\Program Files\AutoHotkey\v2\AutoHotkey.exe'
+cd C:\Users\skyle\AppData\Config
+ls
+mv `New folder\` ahk_scripts
+ls
+mv wallpaper_cycler.ahk ahk_scripts\wallpaper_cycler.ahk
+ls
+let script_path = $'($env.APPDATA)\ahk\wallpaper_cycler.ahk'
+$env.APPDATA
+let script_path = $'C:\Users\skyle\AppData\Config\ahk\wallpaper_cycler.ahk'
+$script_path
+exec r#"C:\Program Files\AutoHotkey\v2\AutoHotkey64.exe"# $"($env.APPDATA)/ahk/wallpaper_cycler.ahk"
+cd C:\Users\skyle\AppData\Config
+ls
+exec r#"C:\Program Files\AutoHotkey\v2\AutoHotkey64.exe"# r#"C:\Users\skyle\AppData\Config\ahk_scripts\wallpaper_cycler.ahk"#
+mv `AppData\Config\New folder\` AppData\Config\wallpapers
+exec r#"C:\Program Files\AutoHotkey\v2\AutoHotkey64.exe"# r#"C:\Users\skyle\AppData\Config\ahk_scripts\wallpaper_cycler.ahk"#
+let ahk64 = 'C:\Program Files\AutoHotkey\v2\AutoHotkey64.exe'
+let script = 'C:\Users\skyle\AppData\Config\ahk_scripts\wallpaper_cycler.ahk'
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "WallpaperCycler" /t REG_SZ /d $"\"($ahk64)\" \"($script)\"" /f
+let ahk64 = 'C:\Program Files\AutoHotkey\v2\AutoHotkey64.exe'
+let script = 'C:\Users\skyle\AppData\Config\ahk_scripts\wallpaper_cycler.ahk'
+let reg_data = [$"\"($ahk64)\"", $"\"($script)\""] | join " "
+let reg_data = $"(char dq)($ahk64)(char dq) (char dq)($script)(char dq)"
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "WallpaperCycler" /t REG_SZ /d $reg_data /f
+reg add 'HKCU\Software\Microsoft\Windows\CurrentVersion\Run' /v 'WallpaperCycler' /t REG_SZ /d '"C:\Program Files\AutoHotkey\v2\AutoHotkey64.exe" "C:\Users\skyle\AppData\Config\ahk_scripts\wallpaper_cycler.ahk"' /f
+reg query 'HKCU\Software\Microsoft\Windows\CurrentVersion\Run' /v 'WallpaperCycler'
+choco install fd fzf -y
+gsudo choco install fd fzf -y
+ls
+clear
+fd -e exe -u -I fd 'C:\'
+fd -e exe -u -I fzf 'C:\'
+fzf
+gsudo choco install starship -y
+fd -e exe -u -I starship 'C:\'
+cd $env.USERPROFILE
+ls
+$env.XDG_CONFIG_HOME = 'C:\Users\skyle\AppData\Config'
+alias cfg = cd $env.XDG_CONFIG_HOME
+cfg
+ls
+cd $HOME
+cd ~
+ls
+cfg
+ls
+cd nushell
+ls
+open env.nu
+choco install neovim
+gsudo choco install neovim
+fd -e exe -u -I nvim 'C:\'
+nvim
+cd C:\bin
+mv `New folder\` resources
+mv black-hole.ico
+mv black-hole.ico resources\black-hole.ico
+gsudo make-link --symbolic 'C:\bin\nvim.exe' 'C:\bin\neovim\nvim-win64\bin\nvim.exe'
+gsudo cmd /c mklink 'C:\bin\nvim.exe' 'C:\bin\neovim\nvim-win64\bin\nvim.exe'
+nvim
+@echo off
+nvim
+clear
+cfg
+cd ~/AppData/skyle
+cd ~/AppData/Config/
+ls
+cd nushell
+nvim env.nu
+cfg
+clear
+cfg
+$env.XDG_CONFIG_HOME
+clear
+cd nushell
+nvim env.nu
+starship
+fd -e exe -u -I starship 'C:\'
+ls `C:\Program Files\starship\bin\`
+ls `C:\Program Files\starship\`
+gsudo cmd /c mklink 'C:\bin\starship.exe' `C:\Program Files\starship\bin\starship.exe`
+starship
+$env.config.hooks.pre_prompt | describe
+$env.config
+setx XDG_CONFIG_HOME $"($env.USERPROFILE)\AppData\Config"
+setx XDG_CONFIG_HOME $'($env.USERPROFILE)\AppData\Config'
+setx NUSHELL_CONFIG_DIR $'($env.USERPROFILE)\AppData\Config\nushell'
+$nu.env-path
+$nu.config-path
+$env.config.hooks.pre_prompt | describe
+$env.config.hooks.pre_prompt | index 0
+$env.config.hooks.pre_prompt
+ls
+nvim config.nu
+$env.config.hooks.pre_prompt
+nvim env.nu
+source $"($env.LOCALAPPDATA)/cache/starship/init.nu"
+source $'($env.LOCALAPPDATA)/cache/starship/init.nu'
+clear
+source 'C:\Users\skyle\AppData\Local\cache\starship\init.nu'
+nvim config.nu
+ls
+nvim env.nu
+nvim config.nu
+cfg
+ls
+cd nushell
+ls
+cd ..
+ls $env.STARSHIP_CONFIG
+$env.STARSHIP_CONFIG
+mkdir starship
+ls
+cd starship
+nvim starship.toml
+ls
+mkdir themes
+ls
+let raw_theme_1 = 'https://raw.githubusercontent.com/rose-pine/starship/refs/heads/main/rose-pine-moon.toml'
+let raw_theme_2 = 'https://raw.githubusercontent.com/rose-pine/starship/refs/heads/main/rose-pine-dawn.toml'
+let raw_theme_3 = 'https://raw.githubusercontent.com/rose-pine/starship/refs/heads/main/rose-pine.toml'
+http get $raw_theme_1 | save -f themes\rose-pine-moon.toml
+http get $raw_theme_2 | save -f themes\rose-pine-dawn.toml
+http get $raw_theme_3 | save -f themes\rose-pine.toml
+ls themes\
+nvim starship.toml
+starship preset nerd-font-symbols -o ~\AppData\Config\starship\starship.toml
+open themes\rose-pine-moon.toml
+nvim starship.toml
+mv starship.toml nf_preset.toml
+ls
+touch base.toml
+nvim base.toml
+nvim nf_preset.toml
+nvim themes\rose-pine-moon.toml
+mv nf_preset.toml base.toml
+ls
+cd ..
+ls
+cd nushell
+nvim config.nu
+nvim env.nu
+clear
+nvim env.nu
+clear
+cd ..
+ls
+git diff
+ls
+ls git
+ls ssh
+nvim .gitignore
+ls
+ls git
+open git/gitconfig
+nvim .gitignore
+git add starship
+git add wallpapers
+git add wsl
+ls wsl
