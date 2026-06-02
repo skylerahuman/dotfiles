@@ -1,3 +1,5 @@
 ssh/
 git/
 nushell/history.txt
+pi/agent/auth.json
+pi/agent/auth.json.lock

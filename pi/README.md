@@ -14,4 +14,9 @@ Shared session state:
 - Windows: `C:\Users\skyle\.pi\agent\sessions` is a junction to `C:\Users\skyle\AppData\Local\State\pi-agent\sessions`.
 - Arch WSL: `/home/sky/.pi/agent/sessions` is a symlink to `/mnt/c/Users/skyle/AppData/Local/State/pi-agent/sessions`.
 
-Edit themes/settings here, then both OSes see the change.
+Shared auth state, intentionally **not tracked**:
+
+- Windows: `C:\Users\skyle\.pi\agent\auth.json` is a hardlink to `C:\Users\skyle\AppData\Local\State\pi-agent\auth.json`.
+- Arch WSL: `/home/sky/.pi/agent/auth.json` is a symlink to `/mnt/c/Users/skyle/AppData/Local/State/pi-agent/auth.json`.
+
+Edit themes/settings here, then both OSes see the change. Do not put OAuth tokens or API keys in this repo.
