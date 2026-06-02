@@ -14,12 +14,15 @@ $env.XDG_STATE_HOME = $"($env.HOME)/.local/state"
 $env.CARGO_HOME = $"($env.XDG_DATA_HOME)/cargo"
 $env.RUSTUP_HOME = $"($env.XDG_DATA_HOME)/rustup"
 
-# Node Pi is intentionally isolated under XDG_DATA_HOME rather than system Node.
+# Node Pi and Antigravity CLI are intentionally isolated under XDG_DATA_HOME.
 $env.PI_NODE_HOME = $"($env.XDG_DATA_HOME)/pi-node/current"
 $env.PI_NODE_BIN = $"($env.PI_NODE_HOME)/bin"
+$env.ANTIGRAVITY_CLI_HOME = $"($env.XDG_DATA_HOME)/antigravity-cli"
+$env.ANTIGRAVITY_CLI_BIN = $"($env.ANTIGRAVITY_CLI_HOME)/bin"
 $env.PATH = (
     $env.PATH
     | prepend $"($env.HOME)/.local/bin"
+    | prepend $env.ANTIGRAVITY_CLI_BIN
     | prepend $env.PI_NODE_BIN
     | uniq
 )
